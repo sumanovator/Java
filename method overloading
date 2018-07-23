@@ -1,0 +1,34 @@
+class test1
+{
+  String method1(){
+      return "method without arguments";
+  }
+  String method1(String a){
+      return "method with "+a+" argument";
+  }
+  String method1(String a,int b){
+      return "method with "+"a "+b+" argument";
+  }    
+  void method1(int b,String a){
+      System.out.println("method with "+b+" a"+" argument");
+  }   
+  void method1(double a,String b){
+      System.out.println("method with "+"b "+a+" argument");
+  }     
+    public static void main (String[] args) {
+        test1 o=new test1();
+        System.out.println(o.method1()); 
+        System.out.println(o.method1("one")); 
+        System.out.println(o.method1("Two",2));
+        o.method1(2,"two");
+        o.method1(2.4,"two");
+    }
+}
+
+Output:-
+---------
+method without arguments
+method with one argument
+method with a 2 argument
+method with 2 a argument
+method with b 2.4 argument
